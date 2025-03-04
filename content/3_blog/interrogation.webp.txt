@@ -1,9 +1,0 @@
-Sort: 3
-
-----
-
-Uuid: WduxPlOl4Fk0U2gz
-
-----
-
-Template: gallery-image

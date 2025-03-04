@@ -1,9 +1,0 @@
-Sort: 1
-
-----
-
-Uuid: KPMDsnUct8NldcOj
-
-----
-
-Template: gallery-image
