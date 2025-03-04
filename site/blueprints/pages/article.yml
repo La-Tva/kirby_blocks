@@ -1,0 +1,38 @@
+title: Project
+
+columns:
+  - width: 1/2
+    sections:
+      block:
+        label: Contenu de la page
+        type: fields
+        fields:
+          one:
+            label: Tous les blocs
+            type: blocks
+      info:
+        type: fields
+        fields:
+          Contenue de l'article: 
+            type: textarea
+            required: true
+            wysiwyg: true
+      content:
+        label: Contenu de la page
+        type: fields
+        fields:
+          two:
+            label: Tous les blocs
+            type: blocks
+
+
+
+
+  - width: 1/2
+    sections:
+      gallery:
+        type: files
+        layout: cards
+        image:
+          ratio: 16/9
+          cover: true

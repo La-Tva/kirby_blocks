@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $page->title() ?></title>
     <?= css('asset/css/index.css') ?>
-    <?= css('asset/css/bento.css') ?>
 </head>
 
 <body>
@@ -16,12 +15,22 @@
 <main class="main">
     <h1><?= $page->title() ?></h1>
 
-    <?php foreach ($page->blocks()->toBlocks() as $block): ?>
-        <?= $block ?>
-    <?php endforeach; ?>
+        <ul class="projects">
+            <?php foreach ($page->children()->listed() as $article): ?>
+            <li>
+                <a href="<?= $article->url() ?>">
+                    <figure>
+                        <?= $article->image()->resize(1200, 1200)?>
+                        <figcaption><?= $article->title() ?></figcaption>
+                    </figure>
+                </a>
+            </li>
+            <?php endforeach ?>
+        </ul>
 
 </main>
 
+<?php snippet('footer') ?>
 
 </body>
 </html>

@@ -1,42 +1,23 @@
-title: Blog
-icon: 📝
+title: Articles
 
-columns:
-  - width: 1/3
-    sections:
-      featured:
-        type: files
-        label: 🌟 Image principale
-        max: 1
-        layout: cards
-        size: large
-        image:
-          ratio: 16/9
-          cover: true
-        template: featured-image  # Assure qu’elle est indépendante
+sections:
+  projects:
+    headline: Published Projects
+    type: pages
+    layout: cards
+    template: article
+    info: '{{ page.title }}'
+    status: published
+    image:
+      ratio: 16/9
+      cover: true
 
-      gallery:
-        type: files
-        label: 📂 Galerie d’images
-        layout: cards
-        size: small
-        multiple: true
-        sortable: true
-        image:
-          ratio: 16/9
-          cover: true
-        template: gallery-image  # Assure qu'elles ne se mélangent pas
-          
-  - width: 2/3
-    sections:
-      content:
-        type: fields
-        fields:
-          text:
-            label: Contenu
-            type: blocks
-            fieldsets:
-              - bento  # Permet d'ajouter le block Bento
-              - heading
-              - text
-              - image
+  drafts:
+    headline: Draft Projects
+    type: pages
+    template: list
+    help: Always upload a nice cover first
+    template: article
+    info: '{{ page.title }}'
+    status: draft
+    image: false
