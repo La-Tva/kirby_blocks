@@ -1,0 +1,25 @@
+Title: Recap
+
+----
+
+Uploaded-images:
+
+- file://6JMiqklbnnQscCbX
+- file://2CxUjrlzORg8dfAV
+- file://Iv6yoD71X9KnXe8Q
+- file://sCE1Qp3TtZiookdu
+- file://cneAgbfQSsCcjCGt
+- file://clKemRxhiJbxzdxw
+- file://6vs2iyaU0dRq9xTs
+
+----
+
+Blocks: [{"content":{"text":"<p>Section bento</p>"},"id":"2ad094a2-b966-41a4-af8f-8687ad57e7ca","isHidden":false,"type":"text"},{"content":{"images":["file://2CxUjrlzORg8dfAV","file://cneAgbfQSsCcjCGt","file://Iv6yoD71X9KnXe8Q","file://6JMiqklbnnQscCbX","file://sCE1Qp3TtZiookdu","file://clKemRxhiJbxzdxw","file://6vs2iyaU0dRq9xTs"]},"id":"98f1f26c-4f6e-40cc-a26a-fc0250da6cb2","isHidden":false,"type":"bento"},{"content":{"text":"<p>Section profil</p>"},"id":"8f82727e-860b-45a5-b680-705c243e796f","isHidden":false,"type":"text"},{"content":{"utilisateur":["user://WqDWkhQU","user://FygxZrPL","user://WNUO93CP"],"presentation":"agence","show_liens":"true"},"id":"20f9f093-12e6-46c6-977d-df360b44232f","isHidden":false,"type":"profil"},{"content":{"utilisateur":["user://FygxZrPL"],"presentation":"agence","show_liens":"true"},"id":"f4bceda3-806e-449f-b1d0-1849a10e8065","isHidden":false,"type":"profil"}]
+
+----
+
+Text: 
+
+----
+
+Uuid: dIPNB3tCXaLLZnz5

@@ -1,0 +1,23 @@
+title: Projects
+
+sections:
+  projects:
+    headline: Published Projects
+    type: pages
+    layout: cards
+    template: project
+    info: '{{ page.title }}'
+    status: published
+    image:
+      ratio: 16/9
+      cover: true
+
+  drafts:
+    headline: Draft Projects
+    type: pages
+    template: list
+    help: Always upload a nice cover first
+    template: project
+    info: '{{ page.title }}'
+    status: draft
+    image: false

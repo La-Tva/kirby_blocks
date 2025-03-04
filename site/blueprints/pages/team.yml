@@ -1,0 +1,23 @@
+title: Team
+
+fields:
+  blocks:
+    type: blocks
+    pretty: true
+    fieldsets:
+      - headding
+      - text
+      - image
+      - bento
+      - type: accordion
+        preview: fields
+        wysiwyg: true
+        fields:
+          items:
+            type: structure
+            fields:
+              summary:
+                type: text
+              details:
+                type: textarea
+                buttons: false

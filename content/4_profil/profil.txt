@@ -1,0 +1,23 @@
+Blocks: [{"content":{"utilisateur":["user://WqDWkhQU","user://FygxZrPL","user://WNUO93CP"],"show_presentation_agence":"false","show_presentation_formation":"false","show_liens":"true"},"id":"52a42253-514c-4f85-9596-0e9b97003817","isHidden":false,"type":"profil"},{"content":{"text":"<p>salut</p>"},"id":"b9dc49e3-93da-4368-8523-efd6ac0c5648","isHidden":false,"type":"text"}]
+
+----
+
+Text: [{"content":{"user":["user://WqDWkhQU"]},"id":"ca6733b8-0564-426f-a128-20e20feb5c58","isHidden":false,"type":"profil"}]
+
+----
+
+User: - user://WqDWkhQU
+
+----
+
+Uuid: FQoyTS1CFBtxmjIJ
+
+----
+
+Builder:
+
+- 
+  content: [ ]
+  id: a8e142c9-d3a5-4db0-844c-e099692afecd
+  isHidden: false
+  type: profil

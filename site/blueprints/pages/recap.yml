@@ -1,0 +1,39 @@
+preview: true  # Active l'aperçu global du blueprint
+columns:
+  left:
+    width: 1/2
+    sections:
+      images:
+        label: Images à télécharger
+        type: fields
+        fields:
+          uploaded_images:
+            label: Choisissez des images à télécharger
+            type: files
+            multiple: true
+            layout: cards
+            size: small
+            sortable: true
+            image:
+              ratio: 16/9
+              cover: true
+            help: "Choisissez des images depuis votre PC à utiliser dans les blocs à droite."
+
+  right:
+    width: 1/2
+    sections:
+      content:
+        label: Contenu de la page
+        type: fields
+        fields:
+          blocks:
+            label: Tous les blocs
+            type: blocks
+            fieldsets:
+              - bento
+              - profil
+              - text
+              - image
+            help: "Ajoutez et organisez les blocs. Vous pouvez transférer les images de la colonne de gauche ici."
+            preview: true   # Active la prévisualisation des blocks
+            wysiwyg: true   # Affiche un rendu plus fidèle dans l'éditeur

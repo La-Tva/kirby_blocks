@@ -1,0 +1,25 @@
+title: Profil
+icon: user
+fields:
+  utilisateur:
+    label: Utilisateur
+    type: users
+    multiple: true
+
+  presentation:
+    label: Présentation
+    type: select
+    default: Présentation de l'utilisateur
+    options:
+      agence: Présentation de l'utilisateur
+      formation: Présentation de la formation de l'utilisateur
+
+
+
+  show_liens:
+    label: Afficher les liens ?
+    type: toggle
+    text:
+      - "Non"
+      - "Oui"
+    default: true

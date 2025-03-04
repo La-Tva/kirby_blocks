@@ -1,0 +1,9 @@
+Sort: 1
+
+----
+
+Uuid: oNNA9Qpr9VbJShIN
+
+----
+
+Template: featured-image

@@ -1,0 +1,48 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+    margin-top: 100px;
+    text-align: center;
+}
+
+P {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: #333;
+    margin: 20px;
+}
+
+.bento-row-0 {
+    background-color: #f4f4f4;
+}
+
+.bento-row-1 {
+  aspect-ratio: 2 / 1;
+  grid-template-columns: (1fr 2fr);
+}
+
+.bento-row-2 {
+    background-color: #f4f4f4;
+}
+
+.profil {
+    margin-top: 30px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}

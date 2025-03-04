@@ -1,0 +1,28 @@
+.project-gallery img {
+    width: 100%;
+    margin: 10px;
+    transition: all 0.3s ease;
+}
+
+
+.project-gallery img:hover {
+    transform: scale(0.9);
+}
+
+.project-layout {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 6rem;
+    padding: 0 40px;
+}
+
+.project-gallery ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    list-style: none;
+}
+
+.info {
+    margin: 2rem;
+}

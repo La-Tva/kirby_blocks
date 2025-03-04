@@ -1,0 +1,69 @@
+title: Utilisateur
+preset: user
+
+tabs:
+  general:
+    label: Informations Générales
+    icon: user
+    columns:
+      - width: 1/1
+        fields:
+          separator:
+            type: line
+
+      - width: 1/2
+        fields:
+          presentation_agence:
+            label: "Présentation (Page Agence)"
+            type: structure
+            max: 1
+            fields:
+              sous_titre:
+                label: Poste et fonction de l'utilisateur
+                type: text
+                placeholder: "Entrez un sous-titre"
+              texte:
+                label: Texte
+                type: textarea
+                placeholder: "Ajoutez une description pour la page agence"
+
+      - width: 1/2
+        fields:
+          presentation_formation:
+            label: "Présentation (Page Formation)"
+            type: structure
+            max: 1
+            fields:
+              sous_titre:
+                label: Poste et fonction de l'utilisateur en formation
+                type: text
+                placeholder: "Entrez un sous-titre"
+              texte:
+                label: Texte
+                type: textarea
+                placeholder: "Ajoutez une description pour la page formation"
+
+      - width: 1/1
+        fields:
+          liens:
+            label: "Liens"
+            type: structure
+            help: "Ajoutez les liens vers les réseaux sociaux de l'utilisateur"
+            fields:
+              reseau:
+                label: Réseau social
+                type: select
+                options:
+                  facebook: Facebook
+                  twitter: Twitter
+                  linkedin: LinkedIn
+                  instagram: Instagram
+              url:
+                label: URL
+                type: url
+                placeholder: "https://..."
+
+options:
+  changeEmail: false
+  changePassword: true
+  delete: true

@@ -1,0 +1,20 @@
+title: Site
+
+sections:
+
+  drafts:
+    label: Drafts
+    type: pages
+    status: draft
+
+  published:
+    label: Publisted Products
+    type: pages
+    status: listed
+    image: false
+
+  unpublished:
+    label: Unlisted Products
+    type: pages
+    status: unlisted
+    image: false

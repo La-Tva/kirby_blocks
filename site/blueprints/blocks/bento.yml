@@ -1,0 +1,14 @@
+name: Bento
+icon: 📦
+fields:
+  images:
+    label: Images
+    type: files
+    multiple: true
+    layout: cards
+    size: small
+    help: "Ajoutez des images au Bento. Elles seront affichées en grille avec 3 colonnes."
+    sortable: true
+    image:
+      ratio: 16/9
+      cover: true

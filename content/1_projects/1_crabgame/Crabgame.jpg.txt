@@ -1,0 +1,21 @@
+Alt: CrabGame
+
+----
+
+Caption: pas mal
+
+----
+
+Photographer: Toto
+
+----
+
+License: 2023
+
+----
+
+Template: gallery-image
+
+----
+
+Uuid: xxrC9gYJjhpp3jtQ

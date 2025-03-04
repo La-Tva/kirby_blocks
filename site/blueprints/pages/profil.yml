@@ -1,0 +1,11 @@
+title: Profils
+sections:
+  content:
+    type: fields
+    fields:
+      blocks:
+        label: Profils
+        type: blocks
+        fieldsets:
+          - profil
+          - text

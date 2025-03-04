@@ -1,0 +1,21 @@
+.blocks {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.block figure img{
+    width: 800px;
+    margin: 40px;;
+}
+ 
+.block[data-type="text"] {
+    width: 50%;
+} 
+
+.block p {
+    text-align: center;
+}
