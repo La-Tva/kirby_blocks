@@ -1,0 +1,12 @@
+title: Catégorie
+image: false
+
+columns:
+  - width: 1/1
+    sections:
+      articles_section:
+        label: Articles de la catégorie
+        type: pages
+        template: article
+        info: "{{ page.title }}"
+        status: all

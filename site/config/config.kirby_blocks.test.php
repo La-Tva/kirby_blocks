@@ -20,4 +20,10 @@ return [
             'security' => false
         ]
     ],
+    'date' => [
+        'timezone' => 'Europe/Paris', // Fuseau horaire français
+    ],
 ];
+
+?>
+

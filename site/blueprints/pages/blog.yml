@@ -1,23 +1,28 @@
-title: Articles
+title: Blog
 
-sections:
-  projects:
-    headline: Published Projects
-    type: pages
-    layout: cards
-    template: article
-    info: '{{ page.title }}'
-    status: published
-    image:
-      ratio: 16/9
-      cover: true
+columns:
+  - width: 1/2
+    sections:
+      articles_section:
+        label: article important
+        type: fields
+        fields:
+          title:
+            label: Titre
+            type: text
+          selectedArticles:
+            label: Articles à afficher
+            type: pages
+            query: site.find('blog').children.listed
+            multiple: true
+            help: Sélectionnez les articles que vous souhaitez afficher sur la page d'accueil.
 
-  drafts:
-    headline: Draft Projects
-    type: pages
-    template: list
-    help: Always upload a nice cover first
-    template: article
-    info: '{{ page.title }}'
-    status: draft
-    image: false
+  - width: 1/2
+    sections:
+      categories_section:
+        label: Catégories
+        type: pages
+        template: category
+        info: "{{ page.title }}"
+        status: all
+

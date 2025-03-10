@@ -1,38 +1,37 @@
-title: Project
+title: Article
 
 columns:
+
   - width: 1/2
     sections:
-      block:
-        label: Contenu de la page
+      temps_lecture:
+        label: Temps de lecture
         type: fields
         fields:
-          one:
-            label: Tous les blocs
-            type: blocks
-      info:
+          reading_time:
+            label: Temps de lecture
+            type: number
+            help: "Entrez le temps de lecture de l'article (ex. 5 min)."
+
+  - width: 1/2
+    sections:
+      article_description:
+        label: Description de l'article
         type: fields
         fields:
-          Contenue de l'article: 
+          description:
+            label: Description
             type: textarea
-            required: true
-            wysiwyg: true
-      content:
-        label: Contenu de la page
+            size: small
+            help: "Ajoutez une courte description de l'article (max. 300 caractères)."
+
+  - width: 1/1
+    sections:
+      blocks_section:
+        label: Contenu de l'article
         type: fields
         fields:
-          two:
-            label: Tous les blocs
+          blocks:
+            label: Blocs de contenu
             type: blocks
-
-
-
-
-  - width: 1/2
-    sections:
-      gallery:
-        type: files
-        layout: cards
-        image:
-          ratio: 16/9
-          cover: true
+            help: "Ajoutez du contenu structuré : texte, images, citations, etc."

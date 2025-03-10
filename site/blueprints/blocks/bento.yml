@@ -1,5 +1,5 @@
 name: Bento
-icon: 📦
+icon: box
 fields:
   images:
     label: Images
