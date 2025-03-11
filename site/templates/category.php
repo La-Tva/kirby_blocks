@@ -22,7 +22,7 @@
     <?php foreach ($page->children()->listed() as $article): ?>
         <li>
             <a href="<?= $article->url() ?>">
-                <h2><?= $article->title() ?></h2>
+                <h3><?= $article->title() ?></h3>
             <p class="article-description"><?= $article->description()->excerpt(300) ?></p>
             </a>
             <div class="article-commantaire">
@@ -74,7 +74,7 @@ function resetVotes(articleId) {
 
 </div>
 
-    <button class="button-30" onclick="window.location.href='<?= $page->parent()->url() ?>'">← Retour blog</button>
+    <button class="button-30" onclick="window.location.href='<?= $page->parent()->url() ?>'">← Retour</button>
 </div>
 </div>
 

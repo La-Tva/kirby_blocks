@@ -32,8 +32,6 @@ columns:
             fieldsets:
               - bento
               - profil
-              - text
-              - image
+              - articles-category
+              - articles-pop
             help: "Ajoutez et organisez les blocs. Vous pouvez transférer les images de la colonne de gauche ici."
-            preview: true   # Active la prévisualisation des blocks
-            wysiwyg: true   # Affiche un rendu plus fidèle dans l'éditeur

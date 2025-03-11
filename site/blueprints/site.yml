@@ -1,20 +1,23 @@
 title: Site
 
-sections:
+tabs:
+  pages:
+    label: Pages
+    sections:
+      drafts:
+        label: Brouillons
+        type: pages
+        status: draft
+        image: false
 
-  drafts:
-    label: Drafts
-    type: pages
-    status: draft
+      published:
+        label: Pages publiées
+        type: pages
+        status: listed
+        image: false
 
-  published:
-    label: Publisted Products
-    type: pages
-    status: listed
-    image: false
-
-  unpublished:
-    label: Unlisted Products
-    type: pages
-    status: unlisted
-    image: false
+      unpublished:
+        label: Pages non listées
+        type: pages
+        status: unlisted
+        image: false

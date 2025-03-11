@@ -1,0 +1,9 @@
+title: Articles  
+fields:  
+  categories:  
+    label: Catégories  
+    type: pages  
+    query: site.find('blog').children  
+    multiple: true  
+    required: true  
+    help: "Choisissez une ou plusieurs catégories d'articles."

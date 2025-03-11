@@ -1,3 +1,5 @@
+<?= css('asset/css/snippets/menu.css') ?>
+
 <nav class="menu">
     <ul>
         <?php foreach ($site->children()->listed() as $item): ?>

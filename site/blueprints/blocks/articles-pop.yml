@@ -1,0 +1,9 @@
+title: Articles Populaires  
+fields:  
+  articles:  
+    label: Articles à afficher  
+    type: pages  
+    querry: site.find('blog').child.listed  
+    multiple: true  
+    required: true  
+    help: "Choisissez les articles à afficher dans cette section."

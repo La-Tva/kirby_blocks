@@ -20,23 +20,17 @@ $selectedArticles = $page->selectedArticles()->toPages();
 // Vérifier s'il y a des articles sélectionnés
 if ($selectedArticles->count() > 0):
 ?>
-<section class="featured-articles">
-    <h2>Articles populaires</h2>
-    <div class="articles-list">
+    <div class="featured-articles">
         <?php foreach ($selectedArticles as $article): ?>
-            <a href="<?= $article->url() ?>" class="article-card">
-                <article>
+            <div class="articles-list">
+                <a href="<?= $article->url() ?>" class="article-card">
                     <h3><?= $article->title() ?></h3>
                     <p class="article-description"><?= $article->description()->excerpt(300) ?></p>
-                </article>
-            </a>
+                </a>
+            </div>
         <?php endforeach ?>
     </div>
-</section>
-
 <?php endif ?>
-
-<h2>Articles par catégorie</h2>
 
 <div class="categories-container">
     <?php foreach ($page->children()->listed() as $category): ?>

@@ -23,21 +23,21 @@
 .profil-name {
     font-size: 1.5em;
     font-weight: bold;
-    color: #222; /* Texte plus foncé */
+    color: var(--text-dark);
     margin: 2px;
 }
 
 .profil-presentation h4 {
     font-size: 1.3em;
     font-weight: 400;
-    color: #444; /* Gris foncé au lieu de #666 */
+    color: var(--text-dark);
     margin-bottom: 5px;
 }
 
 .profil-presentation p {
     font-size: 1em;
     font-weight: 400;
-    color: #555;
+    color: var(--text-dark);
     margin-bottom: 15px;
 }
 
@@ -58,13 +58,13 @@
     align-items: center;
     text-decoration: none;
     font-size: 0.9em;
-    color: #0073e6; /* Bleu dynamique */
+    color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .profil-links a:hover {
-    color: #005bb5; /* Bleu foncé au survol */
+    color: var(--primary-color-hover); /* Bleu foncé au survol */
 }
 
 .profil-icon {
