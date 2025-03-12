@@ -5,12 +5,20 @@ $breadcrumb = $site->breadcrumb();
 
 <nav class="breadcrumb">
     <?php foreach ($breadcrumb as $key => $crumb): ?>
-        <a href="<?= $crumb->url() ?>"><?= $crumb->title() ?></a>
-        <?php if ($key > count($breadcrumb) -1): ?>
-            <span class="separator"> &gt; </span>
-        <?php endif ?>
+        <?php 
+            // Vérifie si la page est un article
+            if ($crumb->intendedTemplate() == 'article') {
+                $numID = intval(crc32($crumb->id()));
+                $crumbUrl = '/blog/' . $crumb->slug() . '-ID' . $numID;
+            } else {
+                $crumbUrl = $crumb->url();
+            }
+        ?>
+        <a href="<?= $crumbUrl ?>"><?= $crumb->title() ?></a>
+        <span class="separator"> > </span>
     <?php endforeach; ?>
 </nav>
+
 
 
 <style>

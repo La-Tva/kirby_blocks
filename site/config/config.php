@@ -81,7 +81,21 @@ return [
                     return response::json(['success' => false, 'message' => 'Erreur lors de la réinitialisation.']);
                 }
             }
-        ]
+        ],
+
+        [
+            'pattern' => 'blog/(:any)-ID(:num)',
+            'action'  => function ($slug, $numID) {
+                foreach(page('blog')->children()->listed() as $category) {
+                    foreach($category->children()->listed() as $article) {
+                        if (intval(crc32($article->id())) === (int)$numID) {
+                            return site()->visit($article);
+                        }
+                    }
+                }
+                return site()->errorPage();
+            }
+          ]
     ]
 ];
 

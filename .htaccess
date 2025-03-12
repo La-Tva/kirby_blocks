@@ -65,3 +65,6 @@ Header set Content-Type "text/plain" "expr=-z %{CONTENT_TYPE}"
 Header set X-Content-Type-Options "nosniff"
 
 </IfModule>
+
+RewriteEngine On
+RewriteRule ^blog/([0-9]+)$ /blog/$1-ID$1 [R=301,L]

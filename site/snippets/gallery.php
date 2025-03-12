@@ -12,8 +12,8 @@
             <ul>
                 <?php foreach ($page->images() as $image): ?>
                 <li>
-                    <a href="<?= $image->url() ?>">
-                        <img src="<?= $image->resize(1200, 1200)->url() ?>" 
+                <a href="<?= $image->url() ?>" target="_blank" rel="noopener noreferrer">
+                <img src="<?= $image->resize(1200, 1200)->url() ?>" 
                         alt="<?= $image->alt() ?>">
                     </a>
                 </li>

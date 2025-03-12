@@ -216,6 +216,13 @@ article, .categories-container, .article-list {
     margin: 50px 0;
 }
 
+.feedback_button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
 .feedback_button .button-30 {
     padding: 10px 20px;
     width: 200px;

@@ -16,22 +16,30 @@
 <h1><?= $page->title() ?></h1>
 
 <div class="article-list">
-<ul>
-    <?php foreach ($page->children()->listed() as $article): ?>
-        <li>
-            <a href="<?= $article->url() ?>">
-                <h3><?= $article->title() ?></h3>
-            <p class="article-description"><?= $article->description()->excerpt(300) ?></p>
-            </a>
-            <div class="article-commantaire">
-                <p>👍 Utile : <?= $article->votes_oui()->isNotEmpty() ? $article->votes_oui() : 0 ?></p>
-                <p>👎 Non utile : <?= $article->votes_non()->isNotEmpty() ? $article->votes_non() : 0 ?></p>
-            </div>
-        </li>
+    <ul>
+        <?php foreach ($page->children()->listed() as $article): ?>
+            <?php 
+                // Génère un identifiant numérique unique à partir de l'ID de l'article
+                $numID = intval(crc32($article->id()));
+                // Construit l'URL relative au format : /blog/nom-de-l-article-IDXXXXXX
+                $articleUrl = '/blog/' . $article->slug() . '-ID' . $numID;
+            ?>
+            <li>
+                <a href="<?= $articleUrl ?>">
+                    <h3><?= $article->title() ?></h3>
+                    <p class="article-description"><?= $article->description()->excerpt(300) ?></p>
+                </a>
+                <div class="article-commentaire">
+                    <p>👍 Utile : <?= $article->votes_oui()->isNotEmpty() ? $article->votes_oui() : 0 ?></p>
+                    <p>👎 Non utile : <?= $article->votes_non()->isNotEmpty() ? $article->votes_non() : 0 ?></p>
+                </div>
+            </li>
 
-       <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
-    <?php endforeach; ?>
-</ul>
+            <!-- <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
+        <?php endforeach; ?>
+    </ul>
+</div>
+
 
 
 

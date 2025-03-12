@@ -40,7 +40,13 @@ if ($selectedArticles->count() > 0):
             <h2><?= $category->title() ?> <span>(<?= $articles->count() ?> articles)</span></h2>
             <ul>
                 <?php foreach ($articles as $article): ?>
-                    <li onclick="location.href='<?= $article->url() ?>'">
+                    <?php 
+                        // Génère un identifiant numérique à partir de l'ID de l'article
+                        $numID = intval(crc32($article->id()));
+                        // Construit l'URL relative au format : /blog/nom-de-l-article-ID3839272
+                        $articleUrl = '/blog/' . $article->slug() . '-ID' . $numID;
+                    ?>
+                    <li onclick="location.href='<?= $articleUrl ?>'">
                         <?= $article->title() ?>
                     </li>
                 <?php endforeach; ?>
@@ -49,6 +55,8 @@ if ($selectedArticles->count() > 0):
         </div>
     <?php endforeach; ?>
 </div>
+
+
 </main>
 
 <?php snippet('footer') ?>
