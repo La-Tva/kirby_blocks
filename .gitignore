@@ -55,3 +55,6 @@ Icon
 
 #content
 /content
+
+#packages
+/packages-lock.json
