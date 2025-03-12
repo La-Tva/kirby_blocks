@@ -1,9 +1,0 @@
-Title: Chat GPT
-
-----
-
-Excerpt: "ChatGPT, c’est plus qu’un simple assistant virtuel. C’est un outil de créativité, d’exploration et de productivité. Que ce soit pour générer du contenu, optimiser du code ou brainstormer des idées, il devient un véritable allié au quotidien. Mais jusqu’où peut-on pousser ses capacités ? Entre astuces, expérimentations et intégrations innovantes, cette catégorie explore tout ce qu’il est possible de faire avec ChatGPT."
-
-----
-
-Uuid: X0JWBfXKg9aXUov7

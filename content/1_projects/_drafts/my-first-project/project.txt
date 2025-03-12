@@ -1,9 +1,0 @@
-Title: My first project
-
-----
-
-Text: 
-
-----
-
-Uuid: 2I4OBD8UyyOpPj78
