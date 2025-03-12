@@ -1,15 +1,11 @@
-<?= css('asset/css/snippets/menu.css') ?>
-<?= css('asset/css/root/colors.css') ?>
-<?= css('asset/css/root/text.css') ?>
-<?= css('asset/css/root/general.css') ?>
-<?= css('asset/css/snippets/footer.css') ?>
-<?= css('asset/css/articles.css') ?>
-<?= css('asset/css/button.css') ?>
-
-<?php snippet('breadcrumb') ?>
+<?= css('styles.min.css/styles.min.css') ?>
 
 
 <header>
-    <a class="logo "href="<?= $site->url() ?>"><?= $site->title() ?></a>
+<title><?= $page->title() ?></title>
     <?php snippet('menu') ?>
 </header>
+
+<main class="main">
+<?php snippet('breadcrumb') ?>
+</main>

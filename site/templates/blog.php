@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $page->title() ?></title>
-    <?= css('asset/css/index.css') ?>
-    <?= css('asset/css/articles.css') ?>
 </head>
 
 <body>
 
 <?php snippet('header') ?>
+
+<main class="main">
 
 <?php
 // Récupérer les articles sélectionnés depuis le panel
@@ -49,6 +49,7 @@ if ($selectedArticles->count() > 0):
         </div>
     <?php endforeach; ?>
 </div>
+</main>
 
 <?php snippet('footer') ?>
 

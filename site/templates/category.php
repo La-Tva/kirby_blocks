@@ -5,14 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= $page->title() ?></title>
-    <?= css('asset/css/index.css') ?>
-    <?= css('asset/css/articles.css') ?>
 </head>
 
 <body>
 
 <?php snippet('header') ?>
-
+<main class="main">
 <div class="article">
 
 <h1><?= $page->title() ?></h1>
@@ -31,7 +29,7 @@
             </div>
         </li>
 
-       <!-- <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
+       <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
     <?php endforeach; ?>
 </ul>
 
@@ -77,6 +75,7 @@ function resetVotes(articleId) {
     <button class="button-30" onclick="window.location.href='<?= $page->parent()->url() ?>'">← Retour</button>
 </div>
 </div>
+</main>
 
 <?php snippet('footer') ?>
 

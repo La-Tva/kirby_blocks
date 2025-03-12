@@ -17,12 +17,14 @@ columns:
             multiple: true
             help: Sélectionnez les articles que vous souhaitez afficher sur la page d'accueil.
 
+
   - width: 1/2
     sections:
       categories_section:
         label: Catégories
         type: pages
         template: category
-        info: "{{ page.title }}"
+        info: "<span>({{ page.children.count() }} articles)</span>"
         status: all
+
 

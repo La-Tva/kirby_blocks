@@ -6,14 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <title><?= $page->title() ?></title>
-    <?= css('asset/css/index.css') ?>
-    <?= css('asset/css/articles.css') ?>
 </head>
 
 <body>
 
 <?php snippet('header') ?>
 
+<main class="main">
 <article>
     <h1><?= $page->title() ?></h1>
 
@@ -39,12 +38,16 @@
     <?php endforeach; ?>
 
     <section class="feedback">
-    <p>Cet article vous a-t-il paru utile ?</p>
+    <p class="feedback-title">Cet article vous a-t-il paru utile ?</p>
     <div class="feedback_button">
-    <button class="button-30" onclick="sendVote('yes')">Oui</button>
-    <button class="button-30" onclick="sendVote('no')">Non</button>
+        <button class="button-30 vote-btn" id="btn-yes" onclick="sendVote('yes')">
+            <span>👍 Oui</span>
+        </button>
+        <button class="button-30 vote-btn" id="btn-no" onclick="sendVote('no')">
+            <span>👎 Non</span>
+        </button>
     </div>
-    <p id="vote-result"></p>
+    <p id="vote-result" class="vote-result"></p>
 </section>
 
 <script>
@@ -57,7 +60,37 @@ function sendVote(vote) {
     .then(response => response.json()) // On attend une réponse JSON
     .then(data => {
         if (data.success) {
-            document.getElementById('vote-result').textContent = 'Merci pour votre avis !';
+            // Messages en fonction du vote
+            let voteMessage = '';
+            if (vote === 'yes') {
+                voteMessage = 'Merci pour votre retour positif ! Nous sommes heureux que cet article vous ait été utile.';
+            } else if (vote === 'no') {
+                voteMessage = 'Merci pour votre retour. Nous sommes désolés que cet article ne vous ait pas été utile.';
+            }
+
+            // Mise à jour du texte du résultat
+            document.getElementById('vote-result').textContent = voteMessage;
+
+            // Cacher les boutons de vote et la question
+            const buttons = document.querySelectorAll('.feedback_button button');
+            buttons.forEach(button => {
+                button.style.display = 'none'; // Cache les boutons après un vote
+            });
+            
+            const question = document.querySelector('.feedback p');
+            if (question) {
+                question.style.display = 'none'; // Cache la question
+            }
+
+            // Ajout de la bordure verte ou rouge en fonction du vote
+            const feedbackSection = document.querySelector('.feedback');
+            if (vote === 'yes') {
+                feedbackSection.classList.add('voted-yes');
+                feedbackSection.classList.remove('voted-no');
+            } else {
+                feedbackSection.classList.add('voted-no');
+                feedbackSection.classList.remove('voted-yes');
+            }
         } else {
             document.getElementById('vote-result').textContent = data.message;
         }
@@ -68,14 +101,12 @@ function sendVote(vote) {
 </script>
 
 
-    <button class="button-30" onclick="window.location.href='<?= $page->parent()->url() ?>'">← Retour catégorie</button>
-    <button class="button-30" onclick="window.location.href='<?= $page->parent()->parent()->url() ?>'">← Retour blog</button>
-
-    <form method="POST" action="/reset-votes">
-        <button type="submit" class="button-30">Réinitialiser les votes</button>
-    </form>
-
+<div class="retour">
+    <button class="button-30" onclick="window.location.href='<?= $page->parent()->url() ?>'">← Aller à la catégorie</button>
+    <button class="button-30" onclick="window.location.href='<?= $page->parent()->parent()->url() ?>'">← Aller au blog</button>
+</div>
 </article>
+</main>
 
 
 

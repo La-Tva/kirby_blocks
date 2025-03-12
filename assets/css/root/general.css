@@ -1,6 +1,6 @@
 :root {
     --border-s: 8px;
-    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    --box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     --box-shadow-article: 0 0 10px rgba(0, 0, 0, 0.1);
     --box-shadow-article-hover: 0 0 10px rgba(0, 0, 0, 0.2);
 }
@@ -15,7 +15,6 @@
 
 body {
     background-color: var(--body-color);
-    margin-top: 120px;
 }
 
 main {
@@ -24,6 +23,7 @@ main {
     animation: fadeInUp 0.6s ease-out forwards;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 100px;
 }
 
 /* Animation pour le fade-in */

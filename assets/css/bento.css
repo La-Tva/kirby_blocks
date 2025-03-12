@@ -1,0 +1,68 @@
+.bento-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bento-row {
+  display: flex;
+  gap: 10px;
+}
+
+.bento-item {
+  width: calc(33.333% - 10px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: var(--border-s);
+}
+
+.bento-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.bento-item img.enlarged {
+  transform: scale(1.2);
+  z-index: 10;
+}
+
+
+/* Media Queries pour la réactivité */
+@media (max-width: 768px) {
+  .bento-row {
+      flex-direction: column; /* Empiler les éléments en colonne sur les petits écrans */
+  }
+
+  .bento-item {
+      width: 100%; /* Les éléments prennent toute la largeur */
+  }
+
+  .bento-item img.enlarged {
+      transform: scale(1.1); /* Réduire l'effet d'agrandissement sur mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .bento-grid {
+      gap: 5px; /* Réduire l'espacement entre les éléments */
+  }
+
+  .bento-row {
+      gap: 5px;
+  }
+
+  .bento-item {
+      aspect-ratio: 1.2; /* Ajuster le ratio pour les très petits écrans */
+  }
+
+  .modal-content {
+      max-width: 95%; /* Ajuster la taille de la modal pour les très petits écrans */
+      max-height: 95%;
+  }
+}
+
+

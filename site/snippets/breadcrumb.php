@@ -5,30 +5,33 @@ $breadcrumb = $site->breadcrumb();
 
 <nav class="breadcrumb">
     <?php foreach ($breadcrumb as $key => $crumb): ?>
-        <a href="<?= $crumb->url() ?>" ><?= $crumb->title() ?></a>
+        <a href="<?= $crumb->url() ?>"><?= $crumb->title() ?></a>
+        <?php if ($key > count($breadcrumb) -1): ?>
+            <span class="separator"> &gt; </span>
+        <?php endif ?>
     <?php endforeach; ?>
 </nav>
 
+
 <style>
-    .breadcrumb {
+.breadcrumb {
     font-size: 16px;
-    margin-bottom: 10px;
-    text-align: center;
-    margin: 2rem 0;
+    margin: 2rem;
+    position: sticky; 
 }
 
 .breadcrumb a {
     text-decoration: none;
-    color: #0073e6;
+    color: var(--text-dark);
 }
 
 .breadcrumb a:hover {
     text-decoration: underline;
+    color: var(--primary-color);
 }
 
-.separator {
+.breadcrumb .separator {
     margin: 0 5px;
-    color: #999;
+    color: #666;
 }
-
 </style>

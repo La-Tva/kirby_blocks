@@ -2,30 +2,7 @@ title: Article
 
 columns:
 
-  - width: 1/2
-    sections:
-      temps_lecture:
-        label: Temps de lecture
-        type: fields
-        fields:
-          reading_time:
-            label: Temps de lecture
-            type: number
-            help: "Entrez le temps de lecture de l'article (ex. 5 min)."
-
-  - width: 1/2
-    sections:
-      article_description:
-        label: Description de l'article
-        type: fields
-        fields:
-          description:
-            label: Description
-            type: textarea
-            size: small
-            help: "Ajoutez une courte description de l'article (max. 300 caractères)."
-
-  - width: 1/1
+  - width: 2/3
     sections:
       blocks_section:
         label: Contenu de l'article
@@ -35,3 +12,32 @@ columns:
             label: Blocs de contenu
             type: blocks
             help: "Ajoutez du contenu structuré : texte, images, citations, etc."
+
+  - width: 1/3
+    sections:
+      stats_votes:
+        label: Statistiques des votes
+        type: stats
+        reports:
+          likes:
+            label: "👍 Votes positifs"
+            value: "{{ page.votes_oui.toInt }}"
+            theme: positive
+          dislikes:
+            label: "👎 Votes négatifs"
+            value: "{{ page.votes_non.toInt }}"
+            theme: negative
+
+      infos_article:
+        type: fields
+        fields:
+          reading_time:
+            label: "Temps de lecture"
+            type: number
+            help: "Entrez le temps de lecture de l'article (ex. 5 min)."
+          description:
+            label: "Description de l'article"
+            type: textarea
+            size: small
+            help: "Ajoutez une courte description de l'article (max. 300 caractères)."
+

@@ -8,5 +8,6 @@ columns:
         label: Articles de la catégorie
         type: pages
         template: article
-        info: "{{ page.title }}"
+        info: "👍 {{ page.votes_oui.toInt }} | 👎 {{ page.votes_non.toInt }}"
         status: all
+

@@ -1,9 +1,6 @@
-<?= css('asset/css/profil.css') ?>
-<?= css('asset/css/index.css') ?>
-
 <?php snippet('header'); ?>
 
-<main>
+<main class="main">
     <h1><?= $page->title() ?></h1>
 
     <?php foreach ($page->blocks()->toBlocks() as $block): ?>
