@@ -222,13 +222,14 @@ article, .categories-container, .article-list {
     justify-content: center;
 }
 
+.feedback_button span {
+    color: var(--text-dark);
+}
+
 
 .feedback_button .button-30 {
     padding: 10px 20px;
     width: 200px;
-    background-color: var(--background-color-dark);
-    color: var(--text-light);
-    box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px, rgba(45, 35, 66, 0.3) 0 7px 13px -3px, rgba(45, 35, 66, 0.3) 0 7px 13px;
 }
 
 .feedback:hover {

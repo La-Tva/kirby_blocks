@@ -4,10 +4,16 @@ image: false
 columns:
   - width: 1/1
     sections:
-      articles_section:
-        label: Articles de la catégorie
+      published_articles_section:
+        label: Articles publiés
         type: pages
         template: article
         info: "👍 {{ page.votes_oui.toInt }} | 👎 {{ page.votes_non.toInt }}"
-        status: all
-
+        status: listed  # Affiche uniquement les articles publiés (publiés)
+        
+      draft_articles_section:
+        label: Brouillons
+        type: pages
+        template: article
+        info: "👍 {{ page.votes_oui.toInt }} | 👎 {{ page.votes_non.toInt }}"
+        status: draft  # Affiche uniquement les articles en brouillon (non publiés)

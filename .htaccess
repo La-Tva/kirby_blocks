@@ -67,4 +67,15 @@ Header set X-Content-Type-Options "nosniff"
 </IfModule>
 
 RewriteEngine On
-RewriteRule ^blog/([0-9]+)$ /blog/$1-ID$1 [R=301,L]
+RewriteBase /
+
+# Redirection pour supprimer le dossier des URLs
+RewriteCond %{REQUEST_URI} ^/kirby_blocks/(.*)$
+RewriteRule ^(.*)$ /%1 [R=301,L]
+
+# Règles Kirby standard
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)?$ index.php [L,E=KIRBY_PATH_INFO:$1]
+
+
