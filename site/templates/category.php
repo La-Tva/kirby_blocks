@@ -35,7 +35,7 @@
                 </div>
             </li>
 
-            <!-- <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
+            <button onclick="resetVotes('<?= $article->id() ?>')">Réinitialiser les votes</button> -->
         <?php endforeach; ?>
     </ul>
 </div>

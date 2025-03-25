@@ -20,11 +20,18 @@ columns:
 
   - width: 1/2
     sections:
-      categories_section:
-        label: Catégories
+      categories_published:
+        label: Catégories publiées
         type: pages
         template: category
         info: "<span>({{ page.children.count() }} articles)</span>"
-        status: all
+        status: listed
+
+      categories_draft:
+        label: Catégories en brouillons
+        type: pages
+        template: category
+        info: "<span>({{ page.children.count() }} articles)</span>"
+        status: draft
 
 

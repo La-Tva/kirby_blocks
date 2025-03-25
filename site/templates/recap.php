@@ -19,6 +19,8 @@
         <?= $block ?>
     <?php endforeach; ?>
 
+    <?php snippet('footer') ?>
+
 
 
 </main>

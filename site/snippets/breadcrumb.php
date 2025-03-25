@@ -24,7 +24,6 @@ $breadcrumb = $site->breadcrumb();
 <style>
 .breadcrumb {
     font-size: 16px;
-    margin: 2rem;
     position: sticky; 
 }
 

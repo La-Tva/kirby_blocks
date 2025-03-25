@@ -58,3 +58,6 @@ Icon
 
 #packages
 /packages-lock.json
+
+#assets / css
+/assets/css
